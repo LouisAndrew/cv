@@ -1,75 +1,17 @@
-# Nuxt 3 Minimal Starter
+# CV
 
-Look at the [Nuxt 3 documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.
+My auto-generated CV document. Resume content is written following the
+[JSON Resume](https://jsonresume.org/getting-started/) format.
 
-## Setup
+## Why?
 
-Make sure to install the dependencies:
+There are multiple visual CV builder out there that works and might fit the
+needs of many people. I find those visual-based builder useful to create a
+visually appealing CV, but is a nightmare to maintain.
 
-```bash
-# npm
-npm install
-
-# pnpm
-pnpm install
-
-# yarn
-yarn install
-
-# bun
-bun install
-```
-
-## Development Server
-
-Start the development server on `http://localhost:3000`:
-
-```bash
-# npm
-npm run dev
-
-# pnpm
-pnpm run dev
-
-# yarn
-yarn dev
-
-# bun
-bun run dev
-```
-
-## Production
-
-Build the application for production:
-
-```bash
-# npm
-npm run build
-
-# pnpm
-pnpm run build
-
-# yarn
-yarn build
-
-# bun
-bun run build
-```
-
-Locally preview production build:
-
-```bash
-# npm
-npm run preview
-
-# pnpm
-pnpm run preview
-
-# yarn
-yarn preview
-
-# bun
-bun run preview
-```
-
-Check out the [deployment documentation](https://nuxt.com/docs/getting-started/deployment) for more information.
+I found a great open source project
+[JSON Resume](https://jsonresume.org/getting-started/) that aims to provide
+developers with an easier way to build their resumes. I like this approach very
+much, but unfortunately I couldn't really find a suitable theme for me. So I
+built this project not only to contain the online version of my resume, but also
+as a way to build a more-maintainable resume, all through code.
