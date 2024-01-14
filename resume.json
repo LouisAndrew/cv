@@ -5,7 +5,17 @@
     "label": "Software Engineer",
     "email": "louisandrew3@gmail.com",
     "url": "https://louis-andrew.com",
-    "summary": "Software engineer with expertise in developing visually appealing and highly functional web applications. Proficient in front-end development, but more than comfortable working on the back-end, ensuring robust and efficient application functionality. Committed to delivering high-quality and maintainable code following the best practices and industry standard."
+    "summary": "Software engineer with expertise in developing visually appealing and highly functional web applications. Proficient in front-end development, but more than comfortable working on the back-end, ensuring robust and efficient application functionality. Committed to delivering high-quality and maintainable code following the best practices and industry standard.",
+    "profiles": [
+      {
+        "network": "LinkedIn",
+        "url": "https://www.linkedin.com/in/louis-andrew/"
+      },
+      {
+        "network": "GitHub",
+        "url": "https://github.com/louisandrew"
+      }
+    ]
   },
   "work": [
     {
@@ -79,15 +89,73 @@
   ],
   "education": [
     {
-      "score": "1.4 - German Grading System, (ECTS Grade A)",
+      "score": "1.4 - German Grading System, (ECTS Grade A).",
       "area": "Applied Computer Science (BSc.)",
       "institution": "Hochschule für Technik und Wirtschaft Berlin",
       "url": "https://www.htw-berlin.de",
       "endDate": "2022-09-01",
       "startDate": "2019-10-01",
       "studyType": "Bachelor",
-      "summary": "Thesis: Design & Implementation of a Fraud Detection System for Autonomous Teams. Source code and thesis is open source and can be found here: https://github.com/BA-LouisAndrew/",
+      "summary": "Thesis: Design & Implementation of a Fraud Detection System for Autonomous Teams. Source code and thesis is open source and can be found here: https://github.com/BA-LouisAndrew/.",
       "location": "Berlin, Germany"
+    }
+  ],
+  "skills": [
+    {
+      "name": "HTML, CSS, JS/TS"
+    },
+    {
+      "name": "React/Next + Gatsby"
+    },
+    {
+      "name": "Vue/Nuxt, Svelte"
+    },
+    {
+      "name": "SCSS, TailwindCSS, Styled Components"
+    },
+    {
+      "name": "Vite, Rollup, Webpack, Gulp"
+    },
+    {
+      "name": "Node/Express, Fastify, GraphQL, Apollo"
+    },
+    {
+      "name": "Jest/Vitest, Cypress/Playwright, Storybook"
+    },
+    {
+      "name": "MongoDB, PostgreSQL, Firebase"
+    },
+    {
+      "name": "Gitlab CI/CD, Github Actions"
+    },
+    {
+      "name": "Docker, K8s"
+    }
+  ],
+  "languages": [
+    {
+      "language": "English",
+      "fluency": "Professional"
+    },
+    {
+      "language": "German",
+      "fluency": "Advanced / C1"
+    },
+    {
+      "language": "Indonesian",
+      "fluency": "Native"
+    }
+  ],
+  "certificates": [
+    {
+      "name": "React Certification: Top 10%",
+      "url": "https://www.testdome.com/certificates/86974efd33fd40a4925db4c7ce5a384f",
+      "issuer": "TestDome"
+    },
+    {
+      "name": "Design Thinking: The Beginner's Guide",
+      "url": "https://www.interaction-design.org/members/louis-andrew/certificate/course/6160f55a-6cd7-4df2-9aee-234a21324eef",
+      "issuer": "Interaction Design Foundation"
     }
   ]
 }

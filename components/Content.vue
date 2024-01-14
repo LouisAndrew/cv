@@ -80,7 +80,7 @@ const bodyContent = computed(() => {
     @apply font-light text-sm tracking-widest inline-flex items-center text-gray-700 flex-wrap;
 
     a {
-      @apply underline mr-3;
+      @apply mr-3;
     }
 
     span {
@@ -93,19 +93,7 @@ const bodyContent = computed(() => {
   }
 
   p {
-    @apply inline-block mt-3;
-  }
-
-  ul {
-    @apply mt-2;
-    li {
-      @apply ml-4 relative;
-
-      &:before {
-        @apply absolute top-0 -left-4;
-        content: "-";
-      }
-    }
+    @apply inline-block mt-3 whitespace-pre-line;
   }
 }
 </style>

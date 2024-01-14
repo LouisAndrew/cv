@@ -7,7 +7,13 @@ const PAGE_BREAK_AFTER = 3;
   <div class="root">
     <PdfPage :resume="resume">
       <template #sidebar>
-        <Sidebar :contact-info="resume.basics" />
+        <Sidebar
+          :contact-info="resume.basics"
+          :skill-info="resume.skills"
+          :language-info="resume.languages"
+          :certification-info="resume.certificates"
+          :network-info="resume.basics.profiles"
+        />
       </template>
 
       <Subheading>Work Experience</Subheading>
@@ -42,34 +48,8 @@ const PAGE_BREAK_AFTER = 3;
   </div>
 </template>
 
-<style lang="postcss">
-* {
-  box-sizing: border-box;
-  -moz-box-sizing: border-box;
-}
-
-body {
-  margin: 0;
-  padding: 0;
-  background-color: #fafafa;
-  font: 12pt "Tahoma";
-}
-
-@page {
-  size: A4;
-  margin: 0;
-}
-</style>
-
-<style lang="postcss">
+<style scoped lang="postcss">
 .root {
   @apply flex flex-col items-center w-screen;
-}
-
-.subpage {
-  padding: 1cm;
-  border: 5px red solid;
-  height: 237mm;
-  outline: 2cm #ffeaea solid;
 }
 </style>

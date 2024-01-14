@@ -17,16 +17,12 @@ defineProps<{ resume: Resume }>();
 
 <style scoped lang="postcss">
 .page {
-  @apply flex;
-  width: 21cm;
-  height: 29.7cm;
-  overflow: hidden;
-  padding: 1cm;
-  margin: 1cm auto;
-  border: 1px #d3d3d3 solid;
-  border-radius: 5px;
-  background: white;
-  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+  @apply flex w-[21cm] h-[29.7cm] overflow-hidden p-[1cm] mx-auto my-[1cm]
+    border border-solid border-[#d3d3d3] rounded bg-white border-t-4 border-t-black shadow-lg;
+
+  &:last-child {
+    @apply break-after-auto;
+  }
 
   @media print {
     & {

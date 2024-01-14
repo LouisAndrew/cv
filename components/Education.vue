@@ -1,7 +1,10 @@
 <script setup lang="ts">
 import type { EducationInfo } from "~/types/resume";
 
-defineProps<{ education: EducationInfo }>();
+const { education } = defineProps<{ education: EducationInfo }>();
+const contentBody = computed(() =>
+  ["Score: ", education.score, "\n", education.summary].join(""),
+);
 </script>
 
 <template>
@@ -13,7 +16,7 @@ defineProps<{ education: EducationInfo }>();
       start: education.startDate,
       end: education.endDate,
     }"
-    :body="education.summary"
+    :body="contentBody"
     :highlights="[]"
     :location="education.location"
   />
