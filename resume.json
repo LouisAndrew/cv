@@ -24,16 +24,14 @@
       "startDate": "2023-09-01",
       "summary": "Working as full-stack engineer in Share NOW (later acquired by Free2Move), also acting as the frontend lead for the team. I worked in a team that's responsible for the backoffice application in the company among other customer-facing applications focused on improving customer-service experience of the customers.",
       "highlights": [
-        "Lead frontend engineer in the team. Responsible in the frontend architectural decisions.",
+        "Lead frontend engineer in the team. Responsible in the frontend architectural decisions and mentoring other engineers.",
         "Core team member of company-wide component library and design system. Responsible in its API design and feature developments.",
-        "Mentoring other engineers in the team.",
         "Worked with WebViews and Micro-Frontend architecture.",
         "Designed and implemented asynchronous system with message queues that processes live rental data",
-        "Tech Stack: Nuxt3/Vue3, Tailwind, GraphQL, TypeScript, Node (Express, fastify and co.), MongoDB, Docker + K8s, RabbitMQ, AWS, Terraform"
+        "Tech Stack: Nuxt3/Vue3, Tailwind, GraphQL, TypeScript, Node, Docker + K8s, RabbitMQ, AWS, Terraform"
       ],
       "url": "https://www.share-now.com",
-      "location": "Berlin, Germany",
-      "cluster": 1
+      "location": "Berlin, Germany"
     },
     {
       "position": "Associate Software Engineer",
@@ -45,13 +43,12 @@
         "Created and succesfully executed a migration plan to migrate a big code base consisting of 15 micro-frontends (written in Vue2) into a single Nuxt3 (Vue3) project",
         "Core team member of company-wide component library and design system. Migrated the company-wide component library from Vue2 to Vue3",
         "Worked with multiple teams to help them during the migration process of their micro-frontends (Vue2 to Vue3). Communicating migration plans and deadlines.",
-        "Increased web performance of the app (Last Contentful Paint / LCP) from 4.2s to ~xxx",
+        "Increased web performance of the app (Last Contentful Paint / LCP) from 4.2s to 2.6s",
         "Worked closely with GraphQL APIs, creating resolvers and extending auto-generated schemas.",
-        "Tech Stack: Vue2, Nuxt3/Vue3, Tailwind, GraphQL, TypeScript, Node (Express), MongoDB, Docker + K8s, Terraform"
+        "Tech Stack: Vue2, Nuxt3/Vue3, Tailwind, GraphQL, TypeScript, Node,  Docker + K8s, Terraform"
       ],
       "url": "https://www.share-now.com",
-      "location": "Berlin, Germany",
-      "cluster": 1
+      "location": "Berlin, Germany"
     },
     {
       "position": "Software Engineer Intern",
@@ -66,8 +63,7 @@
         "Tech Stack: Vue2, SCSS, GraphQL, TypeScript/JavaScript"
       ],
       "url": "https://www.share-now.com",
-      "location": "Berlin, Germany",
-      "cluster": 1
+      "location": "Berlin, Germany"
     },
     {
       "position": "Web Developer (Contract Work)",

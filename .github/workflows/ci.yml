@@ -35,5 +35,5 @@ jobs:
       - name: Archive resume
         uses: actions/upload-artifact@v3
         with:
-          name: Resume output
+          name: output
           path: out.pdf
