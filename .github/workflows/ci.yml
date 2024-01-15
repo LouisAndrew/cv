@@ -28,4 +28,7 @@ jobs:
       - name: Build
         run: "npm run build"
       - uses: browser-actions/setup-chrome@v1
-      - run: chrome --version
+      - run: cp ./.output/public/_ipx/_/* ./.output/public/
+      - run: >
+          sed -i -e 's/\/_ipx\/_\/\([^\s"]*\)/.\/\1/g' ./.output/public/index.html
+      - run: chrome --headless --print-to-pdf=./out.pdf ./.output/public/index.html

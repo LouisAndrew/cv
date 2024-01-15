@@ -1,7 +1,8 @@
 # CV
 
 My auto-generated CV document. Resume content is written following the
-[JSON Resume](https://jsonresume.org/getting-started/) format.
+[JSON Resume](https://jsonresume.org/getting-started/) format. @TODO: How to
+`sed` replace absolute path images for built asset? Problem is: `sed` regex.
 
 ## Why?
 
