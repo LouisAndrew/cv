@@ -1,6 +1,16 @@
 <script setup lang="ts">
 import resume from "./resume.json";
 const PAGE_BREAK_AFTER = 3;
+
+useHead({
+  title: "Louis Andrew | Resume",
+  meta: [
+    {
+      name: "description",
+      content: "Louis Andrew's Resume Site",
+    },
+  ],
+});
 </script>
 
 <template>
@@ -45,11 +55,13 @@ const PAGE_BREAK_AFTER = 3;
         />
       </div>
     </PdfPage>
+
+    <Logo class="absolute bottom-6 right-6 h-20 w-20" />
   </div>
 </template>
 
 <style scoped lang="postcss">
 .root {
-  @apply flex flex-col items-center w-screen;
+  @apply flex flex-col items-center w-screen relative overflow-x-hidden;
 }
 </style>
