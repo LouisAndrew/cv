@@ -45,7 +45,6 @@ body {
   padding: 0;
   background-color: #fafafa;
   font: 12pt "Tahoma";
-  @apply w-screen overflow-x-hidden;
 }
 
 @page {
