@@ -55,13 +55,11 @@ useHead({
         />
       </div>
     </PdfPage>
-
-    <Logo class="absolute bottom-6 right-6 h-20 w-20" />
   </div>
 </template>
 
 <style scoped lang="postcss">
 .root {
-  @apply flex flex-col items-center w-screen relative overflow-x-hidden;
+  @apply flex flex-col items-center relative;
 }
 </style>

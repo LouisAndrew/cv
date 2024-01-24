@@ -43,7 +43,7 @@
         "Created and succesfully executed a migration plan to migrate a big code base consisting of 15 micro-frontends (written in Vue2) into a single Nuxt3 (Vue3) project",
         "Core team member of company-wide component library and design system. Migrated the company-wide component library from Vue2 to Vue3",
         "Worked with multiple teams to help them during the migration process of their micro-frontends (Vue2 to Vue3). Communicating migration plans and deadlines.",
-        "Increased web performance of the app (Last Contentful Paint / LCP) from 4.2s to 2.6s",
+        "Increased web performance of the app (Last Contentful Paint / LCP) from 4.2s to 2s",
         "Worked closely with GraphQL APIs, creating resolvers and extending auto-generated schemas.",
         "Tech Stack: Vue2, Nuxt3/Vue3, Tailwind, GraphQL, TypeScript, Node,  Docker + K8s, Terraform"
       ],
