@@ -5,6 +5,7 @@
   "scripts": {
     "build": "nuxt generate",
     "dev": "nuxt dev",
+    "preinstall": "curl https://raw.githubusercontent.com/LouisAndrew/louis-andrewdotcom/main/resume.json > resume.json",
     "postinstall": "nuxt prepare",
     "start": "npm run dev",
     "lint": "eslint --ext .ts,.vue --ignore-path .gitignore ."
