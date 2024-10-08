@@ -13,6 +13,7 @@
   "devDependencies": {
     "@louisandrew3/eslint-config": "1.6.2",
     "@nuxt/image": "1.2.0",
+    "@nuxtjs/google-fonts": "3.2.0",
     "@vue/eslint-config-prettier": "9.0.0",
     "@vue/eslint-config-typescript": "12.0.0",
     "autoprefixer": "10.4.16",
@@ -26,5 +27,6 @@
     "tailwindcss": "3.4.1",
     "vue": "^3.4.5",
     "vue-router": "^4.2.5"
-  }
+  },
+  "packageManager": "pnpm@8.14.0+sha1.bb42032ff80dba5f9245bc1b03470d2fa0b7fb2f"
 }

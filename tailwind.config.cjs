@@ -10,7 +10,7 @@ module.exports = {
   ],
   theme: {
     fontFamily: {
-      sans: ["Roboto", "ui-sans-serif", "system-ui"],
+      sans: ["Assistant", "ui-sans-serif", "system-ui"],
     },
   },
   plugins: [],

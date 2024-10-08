@@ -3,7 +3,12 @@ export default defineNuxtConfig({
   devtools: { enabled: true },
   ssr: true,
   css: ["~/assets/base.css"],
-  modules: ["@nuxt/image"],
+  modules: ["@nuxt/image", "@nuxtjs/google-fonts"],
+  googleFonts: {
+    families: {
+      Assistant: [400, 500, 600, 700],
+    },
+  },
   postcss: {
     plugins: {
       tailwindcss: {},
