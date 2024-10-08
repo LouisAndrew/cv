@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import resume from "./resume.json";
-const PAGE_BREAK_AFTER = 3;
+const PAGE_BREAK_AFTER = 4;
 
 useHead({
   title: "Louis Andrew | Resume",
