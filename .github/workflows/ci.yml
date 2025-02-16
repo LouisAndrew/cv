@@ -33,7 +33,7 @@ jobs:
       - run: cp ./.output/public/_ipx/_/* ./.output/public/
       - run: >
           sed -i -e 's/\/_ipx\/_\/\([^\s"]*\)/.\/\1/g' ./.output/public/index.html
-      - run: chrome --headless --print-to-pdf=./out.pdf ./.output/public/index.html
+      - run: chrome --no-sandbox --headless --print-to-pdf=./out.pdf ./.output/public/index.html
       - name: Archive resume
         uses: actions/upload-artifact@v4
         with:
