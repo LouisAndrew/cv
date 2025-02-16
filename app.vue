@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import resume from "./resume.json";
-const PAGE_BREAK_AFTER = 4;
+const PAGE_BREAK_AFTER = 3;
 
 useHead({
   title: "Louis Andrew | Resume",
@@ -40,13 +40,15 @@ useHead({
     </PdfPage>
 
     <PdfPage :resume="resume">
-      <JobExperience
-        v-for="(jobExperience, index) in resume.work.slice(PAGE_BREAK_AFTER)"
-        :key="`${jobExperience.url}__${index}`"
-        :job-experience="jobExperience"
-      />
+      <div class="space-y-4">
+        <JobExperience
+          v-for="(jobExperience, index) in resume.work.slice(PAGE_BREAK_AFTER)"
+          :key="`${jobExperience.url}__${index}`"
+          :job-experience="jobExperience"
+        />
+      </div>
 
-      <Subheading class="mt-8">Education</Subheading>
+      <Subheading class="mt-6">Education</Subheading>
       <div class="space-y-4">
         <Education
           v-for="(education, index) in resume.education"
