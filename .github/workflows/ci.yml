@@ -28,6 +28,8 @@ jobs:
       - name: Build
         run: "npm run build"
       - uses: browser-actions/setup-chrome@v1
+        with:
+          chrome-version: 120
       - run: cp ./.output/public/_ipx/_/* ./.output/public/
       - run: >
           sed -i -e 's/\/_ipx\/_\/\([^\s"]*\)/.\/\1/g' ./.output/public/index.html
