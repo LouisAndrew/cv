@@ -5,6 +5,7 @@ export type Content = {
   date: {
     start: string;
     end?: string;
+    excludeMonth?: boolean;
   };
   body: string | null;
   highlights: string[];

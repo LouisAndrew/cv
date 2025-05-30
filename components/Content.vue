@@ -8,10 +8,13 @@ const { heading, subheading, resourceUrl, body, date, highlights, location } =
 const formatDate = (dateString?: string) => {
   if (!dateString) return "PRESENT";
 
-  const date = new Date(dateString);
-  const month = date.getMonth() + 1;
-  const year = date.getFullYear();
+  const d = new Date(dateString);
+  const year = d.getFullYear();
+  if (date.excludeMonth) {
+    return year;
+  }
 
+  const month = d.getMonth() + 1;
   return `${padNumber(month)}.${year}`;
 };
 
@@ -41,7 +44,7 @@ const bodyContent = computed(() => {
 
 <template>
   <div class="content">
-    <h2>
+    <h2 class="shrink-0">
       {{ heading }}
     </h2>
 
@@ -49,16 +52,16 @@ const bodyContent = computed(() => {
       <NuxtLink :to="resourceUrl" target="_blank">
         {{ subheading }}
       </NuxtLink>
-    </h3>
 
-    <div class="location-and-date">
-      {{ location }}
-      ({{ formatDate(date.start) }} - {{ formatDate(date.end) }})
-    </div>
+      <div class="location-and-date">
+        {{ location }} ({{ formatDate(date.start) }} -
+        {{ formatDate(date.end) }})
+      </div>
+    </h3>
 
     <p v-if="body" class="content-body" v-html="bodyContent" />
 
-    <ul v-if="highlights.length > 0">
+    <ul class="mt-2" v-if="highlights.length > 0">
       <li
         v-for="(highlight, index) in highlights"
         :key="index"
@@ -73,11 +76,11 @@ const bodyContent = computed(() => {
 <style scoped lang="postcss">
 .content {
   h2 {
-    @apply font-semibold text-lg tracking-widest;
+    @apply font-semibold text-base;
   }
 
   h3 {
-    @apply font-light text-sm tracking-widest inline-flex items-center text-gray-700 flex-wrap;
+    @apply font-light text-sm tracking-widest inline-flex items-center justify-between text-gray-800 flex-wrap w-full;
 
     a {
       @apply mr-3;
@@ -89,7 +92,7 @@ const bodyContent = computed(() => {
   }
 
   .location-and-date {
-    @apply text-sm font-light text-gray-500;
+    @apply text-sm font-light text-gray-700 whitespace-nowrap;
   }
 
   p {

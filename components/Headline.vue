@@ -21,7 +21,30 @@ const { headlineInfo } = defineProps<{
       </h2>
     </div>
 
-    <p v-if="CONFIG.DISPLAY_PROFILE_SUMMARY" class="content-body">
+    <section class="contact">
+      <NuxtLink class="sidebar-item" :to="`mailto:${headlineInfo.email}`">
+        {{ headlineInfo.email }}
+      </NuxtLink>
+
+      <NuxtLink class="sidebar-item" :to="headlineInfo.url" target="_blank">
+        {{ headlineInfo.url }}
+      </NuxtLink>
+
+      <NuxtLink
+        v-for="{ url, network } in headlineInfo.profiles"
+        :key="url"
+        class="sidebar-item"
+        :to="url"
+        target="_blank"
+      >
+        {{ network }}
+      </NuxtLink>
+    </section>
+
+    <p
+      v-if="CONFIG.DISPLAY_PROFILE_SUMMARY"
+      class="content-body mt-3 col-span-2"
+    >
       {{ headlineInfo.summary }}
     </p>
   </div>
@@ -29,14 +52,16 @@ const { headlineInfo } = defineProps<{
 
 <style scoped lang="postcss">
 .headline {
-  @apply mb-6;
+  grid-template-columns: 1fr auto;
+  grid-template-rows: repeat(2, auto);
+  @apply mb-4 grid;
 
   .hero {
     grid-template-columns: auto 1fr;
     @apply grid grid-rows-2 w-fit gap-x-5 content-end;
 
     .avatar {
-      @apply rounded-full row-start-1 row-span-2 col-start-1 w-24;
+      @apply rounded-full row-start-1 row-span-2 col-start-1 w-20;
     }
 
     h1 {
@@ -46,6 +71,10 @@ const { headlineInfo } = defineProps<{
     h2 {
       @apply font-light inline-block text-lg;
     }
+  }
+
+  .contact {
+    @apply text-sm flex-col flex items-end;
   }
 }
 </style>

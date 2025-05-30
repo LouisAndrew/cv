@@ -11,14 +11,19 @@ defineProps<{ resume: Resume }>();
 
       <slot />
     </div>
-    <slot name="sidebar" />
   </div>
 </template>
 
 <style scoped lang="postcss">
 .page {
-  @apply flex w-[21cm] h-[29.7cm] overflow-hidden p-[1cm] mx-auto my-[1cm]
+  @apply flex w-[21cm] h-[29.7cm] overflow-hidden p-[0.5cm] mx-auto my-[1cm]
     border border-solid border-[#d3d3d3] rounded bg-white border-t-4 border-t-black shadow-lg;
+
+  &:not(:first-child) {
+    :deep(.headline) {
+      @apply hidden;
+    }
+  }
 
   &:last-child {
     @apply break-after-auto;
@@ -35,10 +40,6 @@ defineProps<{ resume: Resume }>();
       background: initial;
       page-break-after: always;
     }
-  }
-
-  .main {
-    @apply w-[70%] pr-8;
   }
 }
 </style>

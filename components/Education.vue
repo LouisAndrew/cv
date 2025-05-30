@@ -15,6 +15,7 @@ const contentBody = computed(() =>
     :date="{
       start: education.startDate,
       end: education.endDate,
+      excludeMonth: true,
     }"
     :body="contentBody"
     :highlights="[]"

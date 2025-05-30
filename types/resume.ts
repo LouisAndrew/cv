@@ -4,7 +4,7 @@ type R = typeof resume;
 export type Resume = Omit<R, "$schema">;
 
 export type Job = Omit<Resume["work"][number], "cluster">;
-export type HeadlineInfo = Omit<Resume["basics"], "profiles">;
+export type HeadlineInfo = Resume["basics"];
 export type ContactInfo = Pick<Resume["basics"], "email" | "url">;
 export type EducationInfo = Resume["education"][number];
 export type SkillInfo = Resume["skills"];

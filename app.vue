@@ -1,6 +1,6 @@
 <script setup lang="ts">
+import SkillsAndCertifications from "./components/SkillsAndCertifications.vue";
 import resume from "./resume.json";
-const PAGE_BREAK_AFTER = 3;
 
 useHead({
   title: "Louis Andrew | Resume",
@@ -16,46 +16,60 @@ useHead({
 <template>
   <div class="root">
     <PdfPage :resume="resume">
-      <template #sidebar>
-        <Sidebar
-          :contact-info="resume.basics"
-          :skill-info="resume.skills"
-          :language-info="resume.languages"
-          :certification-info="resume.certificates"
-          :network-info="resume.basics.profiles"
-        />
-      </template>
+      <Section>
+        <template #subheading> Work Experience </template>
 
-      <Subheading>Work Experience</Subheading>
-      <div class="space-y-4">
         <JobExperience
-          v-for="(jobExperience, index) in resume.work.slice(
-            0,
-            PAGE_BREAK_AFTER,
-          )"
+          v-for="(jobExperience, index) in resume.work"
           :key="`${jobExperience.url}__${index}`"
           :job-experience="jobExperience"
         />
-      </div>
-    </PdfPage>
+      </Section>
 
-    <PdfPage :resume="resume">
-      <div class="space-y-4">
-        <JobExperience
-          v-for="(jobExperience, index) in resume.work.slice(PAGE_BREAK_AFTER)"
-          :key="`${jobExperience.url}__${index}`"
-          :job-experience="jobExperience"
-        />
-      </div>
+      <Section>
+        <template #subheading>Skills & Certifications</template>
 
-      <Subheading class="mt-6">Education</Subheading>
-      <div class="space-y-4">
+        <div class="grid grid-cols-[auto_1fr] gap-x-8 mb-5">
+          <SkillsAndCertifications>
+            <template #title>Skills</template>
+
+            {{ resume.skills.map((s) => s.name).join(", ") }}
+          </SkillsAndCertifications>
+          <SkillsAndCertifications>
+            <template #title>Languages</template>
+
+            {{
+              resume.languages
+                .map((s) => `${s.language} (${s.fluency})`)
+                .join(", ")
+            }}
+          </SkillsAndCertifications>
+          <SkillsAndCertifications>
+            <template #title>Certificates</template>
+
+            <div>
+              <span
+                class="certificate"
+                v-for="({ name, issuer, url }, i) in resume.certificates"
+                :key="i"
+              >
+                <NuxtLink :to="url" target="_blank">
+                  {{ name }} ({{ issuer }})</NuxtLink
+                >
+              </span>
+            </div>
+          </SkillsAndCertifications>
+        </div>
+      </Section>
+
+      <Section>
+        <template #subheading>Education</template>
         <Education
           v-for="(education, index) in resume.education"
           :key="`${education.url}__${index}`"
           :education="education"
         />
-      </div>
+      </Section>
     </PdfPage>
   </div>
 </template>
@@ -63,5 +77,9 @@ useHead({
 <style scoped lang="postcss">
 .root {
   @apply flex flex-col items-center relative;
+}
+
+.certificate:not(:first-child):before {
+  content: ", ";
 }
 </style>
